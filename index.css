@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    overflow: hidden;
+    animation: grow 5s forwards;
+    background-color: blue;
+}
+
+/* Default animation for desktop */
+@keyframes grow {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        font-size: 10px;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+        font-size: 40px;
+    }
+}
+
+/* Tablet devices */
+@media screen and (max-width: 768px) {
+    .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+            font-size: 8px;
+        }
+        100% {
+            transform: scale(2.5);
+            opacity: 0;
+            font-size: 32px;
+        }
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+            font-size: 6px;
+        }
+        100% {
+            transform: scale(2);
+            opacity: 0;
+            font-size: 24px;
+        }
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 320px) {
+    .circle {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+            font-size: 5px;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+            font-size: 20px;
+        }
+    }
+}
