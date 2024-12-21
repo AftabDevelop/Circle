@@ -44,8 +44,30 @@ body {
 /* Tablet devices */
 @media screen and (max-width: 768px) {
     .circle {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+            font-size: 10px;
+        }
+        100% {
+            transform: scale(2.5);
+            opacity: 0;
+            font-size: 36px;
+        }
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .circle {
+        width: 50px;
+        height: 50px;
         font-size: 14px;
     }
     
@@ -56,31 +78,9 @@ body {
             font-size: 8px;
         }
         100% {
-            transform: scale(2.5);
+            transform: scale(2.2);
             opacity: 0;
             font-size: 32px;
-        }
-    }
-}
-
-/* Mobile devices */
-@media screen and (max-width: 480px) {
-    .circle {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-    }
-    
-    @keyframes grow {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-            font-size: 6px;
-        }
-        100% {
-            transform: scale(2);
-            opacity: 0;
-            font-size: 24px;
         }
     }
 }
@@ -88,21 +88,21 @@ body {
 /* For very small screens */
 @media screen and (max-width: 320px) {
     .circle {
-        width: 25px;
-        height: 25px;
-        font-size: 10px;
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
     }
     
     @keyframes grow {
         0% {
             transform: scale(1);
             opacity: 1;
-            font-size: 5px;
+            font-size: 8px;
         }
         100% {
-            transform: scale(1.5);
+            transform: scale(2);
             opacity: 0;
-            font-size: 20px;
+            font-size: 28px;
         }
     }
 }
